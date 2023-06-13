@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { FakeDataCardsInfo } from '../fake data';
+import { RestaurantsInfo } from '../fake data';
 import Cards from './Cards';
 import TextField from './form/TextField';
 import ButtonWithIcon from './form/ButtonWithIcon';
+import LeafletMap from './LeafletMap';
 
 const Filters = () => {
 
@@ -117,15 +118,16 @@ const Filters = () => {
       </div>
 
 
-      <section className="flex flex-row flex-wrap items-center justify-center gap-4 lg:gap-8 pb-2 overflow-hidden px-6 sm:px-16">
+      <section className="w-full flex flex-row flex-wrap items-center justify-center gap-4 lg:gap-8 pb-2 overflow-hidden px-6 sm:px-16">
       {
-        FakeDataCardsInfo.filter((card) => handleSearch( card )).map(( item ) => {
+        RestaurantsInfo.filter((card) => handleSearch( card )).map(( item ) => {
           return (
             // Cards Component
             <Cards key={ item.id } name={ item.name } img={ item.img } paymentMethod={ item.paymentImg} rate={ item.rate } time={ item.time } delivery={ item.delivery } lowest={ item.lowest } location={ item.location } />
           )
         })
       }
+        <LeafletMap />
       </section>
     </section>
   )

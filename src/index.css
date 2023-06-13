@@ -22,3 +22,10 @@ body {
 .overlay:hover>div {
   transform: translateX(0%);
 }
+
+.leaflet-container {
+  width: 90vw;
+  height: 50vh;
+  margin: 50px auto;
+  padding: 0;
+}
