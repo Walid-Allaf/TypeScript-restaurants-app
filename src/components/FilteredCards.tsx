@@ -127,6 +127,8 @@ const Filters = () => {
           )
         })
       }
+      </section>
+      <section className="w-full flex flex-row flex-wrap items-center justify-center gap-4 lg:gap-8 pb-2 overflow-hidden px-6 sm:px-16">
         <LeafletMap />
       </section>
     </section>
